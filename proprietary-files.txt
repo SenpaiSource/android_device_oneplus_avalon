@@ -1826,9 +1826,15 @@ odm/firmware/ufs/SKhynix-HN8T274EJKX130.bin
 odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh
 odm/firmware/ufs/ufs_version_config.xml
 
-# Vibrator
-odm/etc/aac_richtap.config
-odm/lib64/libaacvibrator.so:vendor/lib64/libaacvibrator.so
+# Vibrator (from Pong_B4.1-260414-1749)
+odm/etc/aac_richtap.config|437e41f9cfcaf3185ef6b23e328a53d780b786a5
+vendor/bin/hw/vendor.qti.hardware.vibrator.service|8a16b9d286232d21f4355861d98b16faad252bd9|9de02de8811a64bf8ff86f8f2ae59e1716456643
+vendor/etc/vintf/manifest/vendor.qti.hardware.vibrator.service.xml|1b2536fb77244fbd1b87826229ca1ee72286aa47
+vendor/lib64/hw/vibrator.default.so|24f801fc173b989abfa7990e0e6c058a86e2e13a
+vendor/lib64/libaacvibrator.so|03f0cc29e8ef4b7caa96348637f40c6fd4963914
+vendor/lib64/libqtivibratoreffect.so|90429f42955bc409be5b5a8aa4af2553bf3a96c6
+vendor/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so|babaf76d391f16a7c39e98682b10589aad0ded74
+vendor/lib64/vendor.qti.hardware.vibrator.impl.so|7c6dc66e28c01020b394e6ca0bf13e1b49067949|4babf1e42bc4bf8556d21ce9e939c53ab2dbf457
 
 # Vibrator firmware
 odm/firmware/aw8697_haptic.bin
