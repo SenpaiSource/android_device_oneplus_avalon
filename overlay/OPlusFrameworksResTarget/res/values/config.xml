@@ -296,8 +296,6 @@
          Note: If the display supports multiple resolutions, please define the path config based on
          the highest resolution so that it can be scaled correctly in each resolution. -->
     <string translatable="false" name="config_mainDisplayShape">M20 0h1040s20 0 20 20v2360s0 20 -20 20h-1040s-20 0 -20 -20v-2360s0 -20 20 -20</string>
-<<<<<<< HEAD
-=======
 
     <!-- System Info -->
     <integer name="config_sysCPUTempMultiplier">1000</integer>
@@ -326,5 +324,37 @@
 
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
->>>>>>> d5705f0 (avalon: overlay: Tune ambient display burn-in protection)
+
+    <!-- Default value for fp screen off unlock toggle, it only works for the devices that support
+         fp screen off unlock-->
+    <bool name="config_screen_off_udfps_default_on">true</bool>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
+    
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Whether to use Richtap vibration -->
+    <bool name="config_usesRichtapVibration">true</bool>
+
+    <!-- Vibrator pattern for feedback about a long screen/key press -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+    <!-- Vibrator pattern for feedback about touching a virtual key -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </integer-array>
+    <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
+    <integer-array name="config_clockTickVibePattern">
+        <item>125</item>
+        <item>30</item>
+    </integer-array>
 </resources>
