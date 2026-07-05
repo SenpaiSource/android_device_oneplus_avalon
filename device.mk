@@ -64,6 +64,8 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+AVIUM_MAINTAINER += SATHIYA_SENPAI
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
