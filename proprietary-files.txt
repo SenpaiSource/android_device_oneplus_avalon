@@ -1543,7 +1543,6 @@ odm/etc/PanelChaplin/AdjustValue
 odm/etc/PanelChaplin/panelchaplin
 odm/etc/init/hw/init.oplus.display.rc
 odm/lib64/libPanelChaplin.so
-odm/lib64/vendor.oplus.hardware.display.MixLut3D-V1-ndk_platform.so
 vendor/bin/feature_enabler_client
 vendor/etc/init/feature_enabler_client.rc
 vendor/lib64/libPanelChaplin.so;MODULE_SUFFIX=_vendor
