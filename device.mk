@@ -31,7 +31,7 @@ $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lightning
 
 PRODUCT_PACKAGES += \
     KeyHandlerResTarget \
@@ -63,6 +63,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+LIGHTNINGOS_MAINTAINER := "Sathiya Senpai"
+WITH_GMS := true
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
