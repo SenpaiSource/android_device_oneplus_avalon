@@ -31,7 +31,7 @@ $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lightning
 
 PRODUCT_PACKAGES += \
     KeyHandlerResTarget \
@@ -63,6 +63,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+# LightningOS
+LIGHTNINGOS_MAINTAINER := Sathiya_Senpai
+WITH_GMS := true
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lightning.display="1240 x 2772, 120 hz" \
+    ro.lightning.battery=5500mah \
+    ro.lightning.soc="Qualcomm Snapdragon 7+ Gen 3" \
+    ro.lightning.camera="50MP + 8MP" \
+    ro.lightning.front=16MP \
+    ro.lightning.platform=SM7675 \
+    ro.lightning.screen="6.74″ AMOLED" \
+    ro.lightning.device.name="OnePlus Nord 4"
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
