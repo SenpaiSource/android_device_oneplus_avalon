@@ -25,9 +25,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_AVALON_DTB=y
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
