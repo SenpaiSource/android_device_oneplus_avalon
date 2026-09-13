@@ -324,8 +324,6 @@
 
     <!-- Specifies the maximum burn-in offset vertically. -->
     <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
-<<<<<<< HEAD
-=======
 
     <!-- Default value for fp screen off unlock toggle, it only works for the devices that support
          fp screen off unlock-->
@@ -359,5 +357,4 @@
         <item>125</item>
         <item>30</item>
     </integer-array>
->>>>>>> 1417fb3 (avalon: Kang vibrator from pong)
 </resources>
