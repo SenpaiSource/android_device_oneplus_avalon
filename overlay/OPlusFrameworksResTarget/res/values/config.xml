@@ -360,4 +360,6 @@
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.7</item>
     <!-- Bytes that the PinnerService will pin for WebView -->
     <integer name="config_pinnerWebviewPinBytes">20971520</integer>
+    <!-- Peak refresh rate for keyguard/ambient display -->
+    <integer name="config_keyguardRefreshRate">60</integer>
 </resources>
