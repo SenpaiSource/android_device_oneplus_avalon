@@ -10,4 +10,12 @@
 
     <integer name="config_aodMaxRefreshRate">60</integer>
 
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">0</integer>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent" translatable="false"></string>
+
 </resources>
