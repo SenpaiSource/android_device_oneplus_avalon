@@ -67,6 +67,18 @@ PRODUCT_PACKAGES += \
 LIGHTNINGOS_MAINTAINER := "Sathiya Senpai"
 WITH_GMS := true
 
+# Silence spammy vendor logs
+SPAMMY_LOG_TAGS := \
+    Diag_Lib \
+    AGM \
+    AHAL \
+    CamX
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
+endif
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
