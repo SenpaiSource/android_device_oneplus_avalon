@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2022-2025 The LineageOS Project
+     Copyright (C) 2024 VoltageOS
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
-    <!-- Charging info current divider, if needed -->
-    <integer name="config_currentInfoDivider" translatable="false">1</integer>
-
-    <integer name="config_aodMaxRefreshRate">60</integer>
-
     <!-- The location of the devices physical tri state switch
          0: Left side
          1: Right side -->
@@ -17,5 +11,4 @@
 
     <!-- Whether key handler sends intent when changing slider position -->
     <string name="config_alertSliderIntent" translatable="false"></string>
-
 </resources>
