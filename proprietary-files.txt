@@ -43,6 +43,40 @@ odm/vendor/firmware/antdtx.b07
 odm/vendor/firmware/antdtx.b08
 odm/vendor/firmware/antdtx.mdt
 
+# Crypto Engine firmware
+odm/vendor/firmware/cryptoeng.b00
+odm/vendor/firmware/cryptoeng.b01
+odm/vendor/firmware/cryptoeng.b02
+odm/vendor/firmware/cryptoeng.b03
+odm/vendor/firmware/cryptoeng.b04
+odm/vendor/firmware/cryptoeng.b05
+odm/vendor/firmware/cryptoeng.b06
+odm/vendor/firmware/cryptoeng.b07
+odm/vendor/firmware/cryptoeng.b08
+odm/vendor/firmware/cryptoeng.mdt
+
+# FIDO firmware
+odm/vendor/firmware/fidoctap.b00
+odm/vendor/firmware/fidoctap.b01
+odm/vendor/firmware/fidoctap.b02
+odm/vendor/firmware/fidoctap.b03
+odm/vendor/firmware/fidoctap.b04
+odm/vendor/firmware/fidoctap.b05
+odm/vendor/firmware/fidoctap.b06
+odm/vendor/firmware/fidoctap.b07
+odm/vendor/firmware/fidoctap.b08
+odm/vendor/firmware/fidoctap.mdt
+odm/vendor/firmware/fidotap.b00
+odm/vendor/firmware/fidotap.b01
+odm/vendor/firmware/fidotap.b02
+odm/vendor/firmware/fidotap.b03
+odm/vendor/firmware/fidotap.b04
+odm/vendor/firmware/fidotap.b05
+odm/vendor/firmware/fidotap.b06
+odm/vendor/firmware/fidotap.b07
+odm/vendor/firmware/fidotap.b08
+odm/vendor/firmware/fidotap.mdt
+
 # Audio
 odm/lib64/lib_lvacfs.so
 odm/lib64/liblvacfs_wrapper.so
