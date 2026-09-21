@@ -2,3 +2,5 @@ ro.product.odm.model=CPH2663
 ro.product.odm.name=CPH2663
 ro.vendor.oplus.radio.sar_regionmark=EUEX
 ro.vendor.oplus.regionmark=ROW
+ro.oplus.pipeline.region=ROW
+ro.oplus.pipeline_key=ROW
