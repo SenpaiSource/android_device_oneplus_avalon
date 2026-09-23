@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 The LineageOS Project
+
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.qti.poweroffalarm"
+    android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:label="@string/app_name"
+        android:persistent="false"
+        android:directBootAware="true"
+        android:allowBackup="false">
+
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="false">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".AlarmService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
