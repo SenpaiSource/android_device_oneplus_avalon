@@ -1,0 +1,31 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "PowerOffAlarm",
+    srcs: [
+        "src/**/*.java",
+        "aidl/**/*.aidl",
+    ],
+    aidl: {
+        local_include_dirs: ["aidl"],
+    },
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    optimize: {
+        enabled: false,
+    },
+}
+
+prebuilt_etc {
+    name: "init.power_off_alarm.rc",
+    src: "init.power_off_alarm.rc",
+    sub_dir: "init",
+    vendor: true,
+}
