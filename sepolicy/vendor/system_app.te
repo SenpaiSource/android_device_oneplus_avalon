@@ -1,0 +1,2 @@
+# Allow system_app (PowerOffAlarm) to call QTI alarm HAL AIDL service
+hal_client_domain(system_app, vendor_hal_alarm_qti)

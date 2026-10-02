@@ -40,6 +40,11 @@ PRODUCT_PACKAGES += \
     OPlusSystemUIResTarget \
     OPlusWifiResTarget
 
+# PowerOffAlarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm \
+    init.power_off_alarm.rc
+
 # Regional properties
 REGIONAL_PROP_FILES := $(wildcard $(LOCAL_PATH)/properties/*/*.prop)
 
