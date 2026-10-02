@@ -1,0 +1,5 @@
+on boot
+    start vendor.qti.hardware.alarm-service
+
+on charger
+    start vendor.qti.hardware.alarm-service

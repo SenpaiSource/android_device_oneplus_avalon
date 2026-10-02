@@ -1,0 +1,56 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+aidl_interface {
+    name: "vendor.qti.hardware.alarm",
+    owner: "qti",
+    vendor: true,
+    srcs: ["vendor/**/*.aidl"],
+    stability: "vintf",
+    backend: {
+        java: {
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: false,
+        },
+        cpp: {
+            enabled: false,
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}
+
+android_app {
+    name: "PowerOffAlarm",
+    srcs: [
+        "src/**/*.java",
+    ],
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    static_libs: [
+        "vendor.qti.hardware.alarm-V1-java",
+    ],
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    optimize: {
+        enabled: false,
+    },
+}
+
+prebuilt_etc {
+    name: "init.power_off_alarm.rc",
+    src: "init.power_off_alarm.rc",
+    sub_dir: "init",
+    vendor: true,
+}
