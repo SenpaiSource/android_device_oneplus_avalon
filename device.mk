@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
     OPlusSystemUIResTarget \
     OPlusWifiResTarget
 
+# PowerOffAlarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm \
+    init.power_off_alarm.rc
+
 # Regional properties
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/vendor/odm/etc/24211/build.EU.prop:$(TARGET_COPY_OUT_ODM)/etc/24211/build.EU.prop \
