@@ -59,6 +59,7 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libSuperRaw.so',
         'odm/lib64/libYTCommon.so',
         'odm/lib64/libyuv2.so',
+        'odm/lib64/soundfx/liboplus_spatializer.so',
     ): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     (
