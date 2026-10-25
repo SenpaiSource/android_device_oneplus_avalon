@@ -12,9 +12,9 @@
             <density>560</density>
         </density>
     </densityMapping>
-    <screenBrightnessMap>
+    <screenBrightnessMap interpolation="linear">
         <point>
-            <value>0.000000000</value>
+            <value>0.001465559</value>
             <nits>2.030000</nits>
         </point>
         <point>
