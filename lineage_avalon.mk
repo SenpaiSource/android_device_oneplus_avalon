@@ -34,7 +34,6 @@ TARGET_DISABLE_MATLOG := true
 HBM_SUPPORTED := true
 HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 BYPASS_CHARGE_SUPPORTED := true
-USE_REALITY_ENGINE := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="qssi_64-user 16 BP2A.250605.015 1788854475117 release-keys" \
