@@ -328,8 +328,8 @@
         </sdrHdrRatioMap>
     </highBrightnessMode>
     <autoBrightness enabled="true">
-        <brighteningLightDebounceMillis>1500</brighteningLightDebounceMillis>
-        <darkeningLightDebounceMillis>1500</darkeningLightDebounceMillis>
+        <brighteningLightDebounceMillis>2000</brighteningLightDebounceMillis>
+        <darkeningLightDebounceMillis>2000</darkeningLightDebounceMillis>
         <luxToBrightnessMapping>
             <map>
                 <point>
@@ -539,26 +539,35 @@
             </map>
         </luxToBrightnessMapping>
     </autoBrightness>
+    <screenBrightnessRampFastDecrease>0.06</screenBrightnessRampFastDecrease>
+    <screenBrightnessRampFastIncrease>0.06</screenBrightnessRampFastIncrease>
+    <screenBrightnessRampSlowDecrease>0.04</screenBrightnessRampSlowDecrease>
+    <screenBrightnessRampSlowIncrease>0.04</screenBrightnessRampSlowIncrease>
+    <screenBrightnessRampIncreaseMaxMillis>3000</screenBrightnessRampIncreaseMaxMillis>
+    <screenBrightnessRampDecreaseMaxMillis>3000</screenBrightnessRampDecreaseMaxMillis>
     <displayBrightnessChangeThresholds>
         <brighteningThresholds>
+            <minimum>0.01</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>0</percentage>
+                    <percentage>10</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </brighteningThresholds>
         <darkeningThresholds>
+            <minimum>0.01</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>0</percentage>
+                    <percentage>10</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </darkeningThresholds>
     </displayBrightnessChangeThresholds>
     <ambientBrightnessChangeThresholds>
         <brighteningThresholds>
+            <minimum>5.0</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
@@ -571,6 +580,7 @@
             </brightnessThresholdPoints>
         </brighteningThresholds>
         <darkeningThresholds>
+            <minimum>3.0</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
@@ -585,24 +595,27 @@
     </ambientBrightnessChangeThresholds>
     <displayBrightnessChangeThresholdsIdle>
         <brighteningThresholds>
+            <minimum>0.01</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>0</percentage>
+                    <percentage>10</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </brighteningThresholds>
         <darkeningThresholds>
+            <minimum>0.01</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>0</percentage>
+                    <percentage>10</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </darkeningThresholds>
     </displayBrightnessChangeThresholdsIdle>
     <ambientBrightnessChangeThresholdsIdle>
         <brighteningThresholds>
+            <minimum>5.0</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
@@ -615,6 +628,7 @@
             </brightnessThresholdPoints>
         </brighteningThresholds>
         <darkeningThresholds>
+            <minimum>3.0</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
