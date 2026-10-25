@@ -8,27 +8,35 @@
     package="com.qualcomm.qti.poweroffalarm"
     android:sharedUserId="android.uid.system">
 
+    <permission
+        android:name="org.codeaurora.permission.POWER_OFF_ALARM"
+        android:protectionLevel="normal" />
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="org.codeaurora.permission.POWER_OFF_ALARM" />
 
     <application
         android:label="@string/app_name"
         android:persistent="false"
         android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
         android:allowBackup="false">
 
         <receiver
-            android:name=".BootReceiver"
-            android:exported="false">
-            <intent-filter android:priority="999">
+            android:name=".PowerOffAlarmReceiver"
+            android:exported="true"
+            android:directBootAware="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="org.codeaurora.poweroffalarm.action.SET_ALARM" />
+                <action android:name="org.codeaurora.poweroffalarm.action.CANCEL_ALARM" />
             </intent-filter>
         </receiver>
-
-        <service
-            android:name=".AlarmService"
-            android:exported="false" />
 
     </application>
 
