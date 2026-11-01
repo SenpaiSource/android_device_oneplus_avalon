@@ -59,9 +59,18 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libSuperRaw.so',
         'odm/lib64/libYTCommon.so',
         'odm/lib64/libyuv2.so',
-        'odm/lib64/soundfx/liboplus_spatializer.so',
     ): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
+    'odm/lib64/soundfx/liboplus_spatializer.so': blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so')
+        .sig_replace(
+            '00 00 00 00 01 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00',
+            '10 00 00 00 01 00 00 00 ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00',
+        )
+        .sig_replace(
+            '49 00 80 52 08 e1 46 39 69 02 00 b9 68 04 00 39',
+            '29 00 80 52 08 e1 46 39 69 02 00 b9 68 04 00 39',
+        ),
     ('odm/lib64/libHIS.so', 'odm/lib64/libOGLManager.so', 'odm/lib64/libOPAlgoCamAiBeautyFaceRetouchCn.so', 'odm/lib64/libOPAlgoCamFaceBeautyCap.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
