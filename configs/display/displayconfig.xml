@@ -506,6 +506,24 @@
                 </point>
             </map>
         </luxToBrightnessMapping>
+        <luxToBrightnessMapping>
+            <mode>doze</mode>
+            <setting>normal</setting>
+            <map>
+                <point>
+                    <first>0</first>
+                    <second>0.10818070</second>
+                </point>
+                <point>
+                    <first>12</first>
+                    <second>0.10818070</second>
+                </point>
+                <point>
+                    <first>50</first>
+                    <second>0.35261091</second>
+                </point>
+            </map>
+        </luxToBrightnessMapping>
     </autoBrightness>
     <screenBrightnessRampFastDecrease>0.06</screenBrightnessRampFastDecrease>
     <screenBrightnessRampFastIncrease>0.06</screenBrightnessRampFastIncrease>
