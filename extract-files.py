@@ -111,12 +111,26 @@ blob_fixups: blob_fixups_user_type = {
     (
         'odm/lib64/camera/components/com.oplus.node.mvgsat.so',
         'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
-        'odm/lib64/hw/camera.oemlayer.so',
         'odm/lib64/libmvgcommon.so',
         'odm/lib64/libsharebuffer_impl.so',
         'vendor/lib64/camera/components/com.qti.node.dewarp.so',
     ): blob_fixup()
         .replace_needed('libui.so', 'libui-stock.so'),
+    'odm/lib64/hw/camera.oemlayer.so': blob_fixup()
+        .replace_needed('libui.so', 'libui-stock.so')
+        .sig_replace(
+            '08 05 40 b9 08 7d 01 53 e9 8b 40 f9 29 05 40 b9 08 05 49 6b e8 1b 03 b9 e8 87 40 f9 08 09 40 b9 08 7d 01 53 e9 8b 40 f9 29 09 40 b9 29 7d 01 53 08 01 09 4b e8 1f 03 b9',
+            'e9 8b 40 f9 08 05 40 b9 29 05 40 b9 08 01 09 4b 08 7d 01 53 08 79 1f 12 e8 1b 03 b9 e8 87 40 f9 08 09 40 b9 29 09 40 b9 08 01 09 4b 08 7d 01 53 08 79 1f 12 e8 1f 03 b9',
+        ),
+    'odm/etc/camera/CameraOemConfiguration.config': blob_fixup()
+        .regex_replace('Mode\\[0\\]\\s*=\\s*0x8001;\\s*0x0020;', 'Mode[0]     =      0x8001;       0x0035;')
+        .regex_replace('Mode\\[1\\]\\s*=\\s*0x8009;\\s*0x0014;', 'Mode[1]     =      0x8009;       0x0035;')
+        .regex_replace('Mode\\[2\\]\\s*=\\s*0x8019;\\s*0x0020;', 'Mode[2]     =      0x8019;       0x0035;')
+        .regex_replace('Mode\\[3\\]\\s*=\\s*0x8030;\\s*0x0010;', 'Mode[3]     =      0x8030;       0x0035;')
+        .regex_replace('(Mode\\[15\\]\\s*=\\s*0x8001;\\s*)0x0020;', '\\g<1>0x0035;')
+        .regex_replace('(Mode\\[22\\]\\s*=\\s*0x8001;\\s*)0x0020;', '\\g<1>0x0035;')
+        .regex_replace('(Mode\\[23\\]\\s*=\\s*0x8019;\\s*)0x0020;', '\\g<1>0x0035;')
+        .regex_replace('(Mode\\[24\\]\\s*=\\s*0x8019;\\s*)0x0020;', '\\g<1>0x0035;'),
     'vendor/lib64/libui-stock.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
 }  # fmt: skip
