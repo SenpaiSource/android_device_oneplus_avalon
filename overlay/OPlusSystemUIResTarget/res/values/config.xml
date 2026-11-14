@@ -8,4 +8,65 @@
     <!-- Charging info current divider, if needed -->
     <integer name="config_currentInfoDivider" translatable="false">1</integer>
 
+    <!-- Stock OplusPanoramicAODLightController AOD_LUX_LEVEL (27 thresholds) -->
+    <integer-array name="config_doze_lux_levels" translatable="false">
+        <item>0</item>
+        <item>25</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>600</item>
+        <item>700</item>
+        <item>800</item>
+        <item>900</item>
+        <item>1000</item>
+        <item>1100</item>
+        <item>1200</item>
+        <item>1300</item>
+        <item>1400</item>
+        <item>1500</item>
+        <item>1600</item>
+        <item>1700</item>
+        <item>1800</item>
+        <item>1900</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>3500</item>
+        <item>4000</item>
+        <item>5000</item>
+    </integer-array>
+
+    <!-- Stock config_panoramic_aod_brightness_nit / 1.6f mapped via display_brightness_config_P_7.xml / 4095 -->
+    <array name="config_doze_lux_to_brightness_float" translatable="false">
+        <item>0.082784</item>
+        <item>0.264119</item>
+        <item>0.293357</item>
+        <item>0.312439</item>
+        <item>0.319223</item>
+        <item>0.327992</item>
+        <item>0.344697</item>
+        <item>0.356591</item>
+        <item>0.371515</item>
+        <item>0.384078</item>
+        <item>0.396321</item>
+        <item>0.409888</item>
+        <item>0.420881</item>
+        <item>0.433575</item>
+        <item>0.439633</item>
+        <item>0.452963</item>
+        <item>0.458698</item>
+        <item>0.470115</item>
+        <item>0.478201</item>
+        <item>0.488992</item>
+        <item>0.495771</item>
+        <item>0.542560</item>
+        <item>0.588038</item>
+        <item>0.633631</item>
+        <item>0.644182</item>
+        <item>0.661878</item>
+    </array>
+
 </resources>
