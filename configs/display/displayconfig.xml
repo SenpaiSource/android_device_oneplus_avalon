@@ -521,27 +521,27 @@
     <ambientLightHorizonShort>1000</ambientLightHorizonShort>
     <displayBrightnessChangeThresholds>
         <brighteningThresholds>
-            <minimum>0.01</minimum>
+            <minimum>0.001</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>10</percentage>
+                    <percentage>1</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </brighteningThresholds>
         <darkeningThresholds>
-            <minimum>0.01</minimum>
+            <minimum>0.001</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
-                    <percentage>10</percentage>
+                    <percentage>1</percentage>
                 </brightnessThresholdPoint>
             </brightnessThresholdPoints>
         </darkeningThresholds>
     </displayBrightnessChangeThresholds>
     <ambientBrightnessChangeThresholds>
         <brighteningThresholds>
-            <minimum>7.01</minimum>
+            <minimum>0</minimum>
             <brightnessThresholdPoints>
                 <brightnessThresholdPoint>
                     <threshold>0</threshold>
