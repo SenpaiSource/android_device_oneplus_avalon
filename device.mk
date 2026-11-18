@@ -87,6 +87,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
 endif
 
+# Performance
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.perf.gestureflingboost.enable=true
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
