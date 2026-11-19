@@ -70,6 +70,18 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace(
             '49 00 80 52 08 e1 46 39 69 02 00 b9 68 04 00 39',
             '29 00 80 52 08 e1 46 39 69 02 00 b9 68 04 00 39',
+        )
+        .sig_replace(
+            '09 01 40 b9 26 05 00 11 ca 18 00 12 5f 01 00 71 24 19 49 7a 06 01 00 b9 6c 01 00 54 a1 ff ff f0 c2 ff ff 90 a3 ff ff f0 a4 02 40 f9 65 02 40 f9 21 f4 3a 91 42 dc 22 91 63 50 08 91 c0 00 80 52 f8 12 00 94',
+            '68 02 40 f9 89 9e 81 b9 16 7d 09 9b 80 e6 40 f9 c0 00 00 b5 e0 03 16 aa 22 13 00 94 80 e6 00 f9 68 02 40 f9 88 e2 00 f9 e1 03 1f 2a e2 03 16 aa 20 13 00 94 1f 20 03 d5 1f 20 03 d5 1f 20 03 d5 1f 20 03 d5',
+        )
+        .sig_replace(
+            'a1 ff ff d0 a2 ff ff d0 a3 ff ff f0 21 f4 3a 91 42 fc 1e 91 63 20 24 91 40 00 80 52 09 11 00 94',
+            '7f 32 01 b9 7f 92 01 b9 28 00 80 52 68 22 05 39 1f 20 03 d5 1f 20 03 d5 1f 20 03 d5 1f 20 03 d5',
+        )
+        .sig_replace(
+            'df 0e 00 71 e9 4e 40 b9 e8 07 9f 1a 68 fe 01 39',
+            'df 0e 00 71 e9 4e 40 b9 28 00 80 52 68 fe 01 39',
         ),
     ('odm/lib64/libHIS.so', 'odm/lib64/libOGLManager.so', 'odm/lib64/libOPAlgoCamAiBeautyFaceRetouchCn.so', 'odm/lib64/libOPAlgoCamFaceBeautyCap.so'): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
